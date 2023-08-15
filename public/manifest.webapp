@@ -1,0 +1,30 @@
+{
+  "name": "Devos Converter",
+  "description": "Demonstrates a basic app",
+  "version": "0.0.1",
+  "developer": {
+    "name": "Devos",
+    "url": "http://getdevos.com"
+  },
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icons/app_56.png",
+    "112": "/icons/app_112.png"
+  },
+  "theme_color": "#a065e6",
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": {}
+  },
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "orientation": "default",
+  "locales": {
+    "en-US": {
+      "name": "Devos",
+      "description": "Devos Sample App"
+    }
+  },
+  "default_locale": "en-US"
+}
