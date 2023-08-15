@@ -1,58 +1,69 @@
+# Currency Converter - React
 
+This React version of the Currency converter app demonstrates a very basic app built for Satchet. All your regular tools can work while building for Satchet.
+
+
+## Table of Contents
+
+- [Tool Versions](#tool-versions)
+- [Available Scripts](#available-scripts)
+- [Setting Up ADB](#setting-up-adb)
 
 ## Tool Versions
-Node : v20.5.1
-NPM : v9.8.0
+
+- **Node**: v20.5.1
+- **NPM**: v9.8.0
+
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the following scripts:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This command runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will automatically reload if you make edits, and you will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This launches the test runner in interactive watch mode. For more details on running tests, refer to the official.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This command builds the app for production to the `build` folder. It bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include hashes. After this, your app is ready for deployment!
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-## Learn More
+### `npm push`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This script is used to push your app, and it requires ADB (Android Debug Bridge) to be set up. ADB is a versatile command-line tool that lets you communicate with a device. It's essential for certain tasks, such as pushing apps to devices or emulators. [Learn more about setting up ADB below](#setting-up-adb).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setting Up ADB
 
-### Code Splitting
+To run the `npm push` script, you need to have ADB set up on your system. Here's how to add ADB platform tools to your system path on a Mac:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Download Platform Tools
 
-### Analyzing the Bundle Size
+1. **Download the Platform Tools**: If you haven't already, download the platform tools from the [Android Developer website](https://developer.android.com/studio/releases/platform-tools) and extract the ZIP File.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+2. **Extract the ZIP File**: Once downloaded, you'll see a folder named `platform-tools`.
 
-### Making a Progressive Web App
+3. **Move the Folder**: Move the `platform-tools` folder to your system root. You can run `cd ~` in the terminal and move the downloaded folder here.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+4. **Run ADB File**: Open the `platform-tools` folder and run the `adb` file. You would need to add `adb` to your **PATH**, refer to the [Add adb to PATH](#add-adb-to-path) section on how to do this.
 
-### Advanced Configuration
+5. **Verify Installation:**
+Restart your terminal. After restarting, type adb version and press Enter. This should display the version of ADB you've installed, indicating that it's been successfully installed.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+   **Note**: You might need to allow your Mac to install apps from third-party sources. You can do this from the Privacy & Security settings on your Mac.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Add adb to PATH
 
-### `npm run build` fails to minify
+1. **For macOS Catalina and later**:
+   ```bash
+   echo 'export PATH=$PATH:/path_to_folder/platform-tools' >> ~/.zshrc
+   source ~/.zshrc
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. **For macOS Mojave and earlier**:
+   ```bash
+   echo 'export PATH=$PATH:/path_to_folder/platform-tools' >> ~/.bash_profile
+   source ~/.bash_profile
+
+Replace `/path_to_folder/` with the actual path where you moved the platform-tools folder.
