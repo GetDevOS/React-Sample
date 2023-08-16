@@ -1,6 +1,6 @@
 .input {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: "Open Sans", sans-serif;
   margin: 5px 10px;
   position: relative;

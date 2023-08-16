@@ -2,7 +2,6 @@
 
 This React version of the Currency converter app demonstrates a very basic app built for Satchet. All your regular tools can work while building for Satchet.
 
-
 ## Table of Contents
 
 - [Tool Versions](#tool-versions)
@@ -49,21 +48,24 @@ To run the `npm push` script, you need to have ADB set up on your system. Here's
 4. **Run ADB File**: Open the `platform-tools` folder and run the `adb` file. You would need to add `adb` to your **PATH**, refer to the [Add adb to PATH](#add-adb-to-path) section on how to do this.
 
 5. **Verify Installation:**
-Restart your terminal. After restarting, type adb version and press Enter. This should display the version of ADB you've installed, indicating that it's been successfully installed.
-
+   Restart your terminal. After restarting, type adb version and press Enter. This should display the version of ADB you've installed, indicating that it's been successfully installed.
 
    **Note**: You might need to allow your Mac to install apps from third-party sources. You can do this from the Privacy & Security settings on your Mac.
 
 ### Add adb to PATH
 
 1. **For macOS Catalina and later**:
+
    ```bash
    echo 'export PATH=$PATH:/path_to_folder/platform-tools' >> ~/.zshrc
    source ~/.zshrc
+
+   ```
 
 1. **For macOS Mojave and earlier**:
    ```bash
    echo 'export PATH=$PATH:/path_to_folder/platform-tools' >> ~/.bash_profile
    source ~/.bash_profile
+   ```
 
 Replace `/path_to_folder/` with the actual path where you moved the platform-tools folder.

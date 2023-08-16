@@ -28,7 +28,6 @@ export const softkeyCallback = {
   },
 };
 function handleKeyDown(evt) {
-  console.log(evt);
   switch (evt.key) {
     case "SoftLeft":
       // Action case press left key
@@ -69,5 +68,7 @@ function handleKeyDown(evt) {
 }
 
 export function useSoftKeys({ softkeyCallback }) {
-  document.addEventListener("keydown", handleKeyDown);
+  document.addEventListener("keydown", (event) =>
+    handleKeyDown(event, softkeyCallback)
+  );
 }

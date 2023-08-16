@@ -12,17 +12,14 @@ export function useFetchData() {
     const baseCurrency = base;
     const targetCurrency = target;
     const url = `https://exchange-rates.abstractapi.com/v1/convert?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}&base_amount=${amount}`;
-    console.log("Url", "Feting");
+
     try {
       setIsLoading(true);
       const response = await fetch(url);
-
       const jsonData = await response.json();
       setData(jsonData);
-      console.log("Url", jsonData);
       setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching data:", error);
       setIsLoading(false);
     }
   };

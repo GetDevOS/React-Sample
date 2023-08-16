@@ -28,7 +28,7 @@ export default function Home() {
   softKeyCallbacks.arrowUp = flipFocus;
 
   useEffect(() => {
-    fetchData("1", "EUR", "USD");
+    fetchData("1", "USD", "EUR");
   }, []);
   useDPadNavigation();
 
@@ -51,7 +51,7 @@ export default function Home() {
       <header class="header">
         <span>CURRENCY CONVERTER</span>
       </header>
-      <div className="home">
+      <div className="homeApp">
         <div className="loading">
           <>{isLoading ? <p>Loading...</p> : <span></span>}</>
         </div>
