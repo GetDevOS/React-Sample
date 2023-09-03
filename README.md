@@ -33,6 +33,10 @@ This command builds the app for production to the `build` folder. It bundles Rea
 
 This script is used to push your app, and it requires ADB (Android Debug Bridge) to be set up. ADB is a versatile command-line tool that lets you communicate with a device. It's essential for certain tasks, such as pushing apps to devices or emulators. [Learn more about setting up ADB below](#setting-up-adb).
 
+## Put device in debug mode
+
+To put your device in debug mode, dial `*#*#0574#*#*`, click on `Adb Debug` and click the checkbox to turn it on. A bug icon should now be displayed on device screen.
+
 ## Setting Up ADB
 
 To run the `npm push` script, you need to have ADB set up on your system. Here's how to add ADB platform tools to your system path on a Mac:

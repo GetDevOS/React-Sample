@@ -20,7 +20,8 @@ installToADB(buildFolder)
   .then(() => {
     process.exit(0);
   })
-  .catch(() => {
+  .catch((err) => {
+    console.log(err);
     console.log("fail to push app to device");
     process.exit(1);
   });
